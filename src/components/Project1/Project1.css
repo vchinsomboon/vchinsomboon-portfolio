@@ -1,0 +1,13 @@
+p {
+    color: black;
+    width: 270px;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0;
+    margin-bottom: 10px;
+    }
+
+ul li{
+    font-family: "Roboto";
+}
