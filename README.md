@@ -1,6 +1,6 @@
 # My Portfolio
 
-This repository hosts the source code and deployment configuration for my personal/portfolio website hosted on GitHub Pages.
+This repository hosts the source code and deployment configuration for my personal/portfolio website hosted on GitHub Pages. (In Progress)
 
 ## Getting Started
 
