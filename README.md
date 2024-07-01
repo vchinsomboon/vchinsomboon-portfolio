@@ -9,34 +9,20 @@ This repository hosts the source code and deployment configuration for my person
 - [Node.js](https://nodejs.org/) and npm installed
 - [Git](https://git-scm.com/) installed
 
-### Initializing a React Application
+### Clone React Project Repo
 
-1. **Create a new React application:**
-
-   ```bash
-   npx create-react-app my-portfolio
-   cd my-portfolio
-2. **Install the gh-pages package:**
+1. **Clone the repository:**
 
    ```bash
-   npm install gh-pages --save-dev
-3. **Update package.json with deployment scripts:**
+   git clone https://github.com/vchinsomboon/vchinsomboon-portfolio.git
+   cd vchinsomboon-portfolio
+   ```
+2. **Install dependencies:**
 
-   Open package.json and add the following fields and scripts:
-
-   ```json
-   {
-      "homepage": "https://your-username.github.io/your-repository",
-      "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
-       }
-     }
-
-Replace your-username and your-repository with your GitHub username and repository name.
-
+   ```bash
+   npm install
+   ```
+   Make sure to execute this command in the root directory of the project
 ## Development Workflow
 
 1. **Make changes in the main branch:**
@@ -44,11 +30,11 @@ Replace your-username and your-repository with your GitHub username and reposito
      ```bash
      git commit -m "Describe your changes"
      git push 
-
+     ``` 
 2. **Run the development server:**
      ```bash
      npm start
-
+     ``` 
   Open your browser and visit http://localhost:3000 to view the application.
 
 3. **Deploy the application to GitHub Pages:**
@@ -57,7 +43,9 @@ Replace your-username and your-repository with your GitHub username and reposito
 
      ```bash
      npm run deploy
+     ``` 
 
+   Check that the application updates successfully by visiting https://vchinsomboon.github.io/vchinsomboon-portfolio.
 ### GitHub Pages Update
 GitHub Pages automatically detects changes on the gh-pages branch and updates your deployed application accordingly. It may take a few moments for GitHub Pages to reflect the changes after you push to the gh-pages branch.
 
