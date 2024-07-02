@@ -1,54 +1,80 @@
-import { HStack, Box, Link, VStack } from "@chakra-ui/react";
-import { Routes, Route, Link as RouterLink } from "react-router-dom";
+import React from 'react';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { Routes, Route } from "react-router-dom";
 import About from "./About";
-import Contact from "./Contact";
+import Project1 from "./Projects/Project1";
+import Project2 from "./Projects/Project2"; // Import Project2 component
 import logo from "../assets/VCLogo.png";
-import ProjectsLanding from "./ProjectsLanding";
+import config from "../config";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { Flex } from "@chakra-ui/react";
 
-const Nav = () => {
+const { GITHUB_URL, LINKEDIN_URL, EMAIL_URL, PROJECTS } = config;
+
+const NavBar = () => {
   return (
-    <nav className="Nav">
-      <VStack align="center" spacing={4}>
-        <img src={logo} alt="logo" width="250" />
-        <HStack as="ul" listStyleType="none" spacing={4} padding={"inherit"}>
-          <NavItem to="/about" className="nav-item">
-            About
-          </NavItem>
-          <NavItem to="/projects" className="nav-item">
-            Projects
-          </NavItem>
-          <NavItem to="/contact" className="nav-item">
-            Contact
-          </NavItem>
-        </HStack>
-      </VStack>
+    <div>
+      <Navbar bg="light" expand="lg" fixed="top">
+        <Navbar.Brand href="/">
+          <img
+            src={logo}
+            width="120"
+            className="d-inline-block align-top"
+            alt="logo"
+          />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Flex
+            direction={{ base: "column", lg: "row" }}
+            align={{ base: "start", lg: "center" }}
+            w="100%"
+          >
+            <Nav className="mr-auto" width="auto">
+              <LinkContainer to="/about">
+                <Nav.Link>About</Nav.Link>
+              </LinkContainer>
+              <NavDropdown title="Projects" id="basic-nav-dropdown" className="custom-dropdown">
+                {PROJECTS.map((project) => (
+                  <LinkContainer key={project.id} to={`/projects/${project.id}`}>
+                    <NavDropdown.Item>{project.title}</NavDropdown.Item>
+                  </LinkContainer>
+                ))}
+              </NavDropdown>
+              <Nav.Link href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
+                <FaGithub size={30} />
+              </Nav.Link>
+              <Nav.Link href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
+                <FaLinkedin size={30} />
+              </Nav.Link>
+              <Nav.Link href={`mailto:${EMAIL_URL}`} target="_blank" rel="noopener noreferrer">
+                <FaEnvelope size={30} />
+              </Nav.Link>
+            </Nav>
+          </Flex>
+        </Navbar.Collapse>
+      </Navbar>
 
       <Routes>
-        {/* Specify the default route to render Home */}
         <Route index element={<About />} />
         <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<ProjectsLanding />} />
-        <Route path="/contact" element={<Contact />} />
+        {PROJECTS.map((project) => (
+          <Route
+            key={project.id}
+            path={`/projects/${project.id}`}
+            element={
+              project.id === 'Project1' ? <Project1 /> :
+                project.id === 'Project2' ? <Project2 /> :
+                  null // Add more conditions for other projects as needed
+            }
+          />
+        ))}
       </Routes>
-    </nav>
+    </div>
   );
 };
 
-const NavItem = ({ to, children, className }) => {
-  return (
-    <Box as="li" className={className}>
-      <Link
-        as={RouterLink}
-        to={to}
-        p={2}
-        rounded="md"
-        _hover={{ bg: "gray.200" }}
-        _active={{ bg: "gray.300" }}
-      >
-        {children}
-      </Link>
-    </Box>
-  );
-};
-
-export default Nav;
+export default NavBar;

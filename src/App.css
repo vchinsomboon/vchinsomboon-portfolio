@@ -6,10 +6,13 @@
   background-color: #ffffff;
 }
 
-.App > Nav {
-grid-column: 1;
-grid-row: 1;
-padding: 10px;
+.App>Nav {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.App>Footer {
+  padding-top: 50px;
 }
 
 ul li {
@@ -17,36 +20,37 @@ ul li {
 }
 
 h1 {
-font-family: Barlow Semi Condensed;
-font-size: 56px;
-font-style: normal;
-font-weight: 500;
-margin: 0;
-padding-top: 20px;
-line-height: 1;}
+  font-family: Barlow Semi Condensed;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 500;
+  margin: 0;
+  padding-top: 20px;
+  line-height: 1;
+}
 
 h2 {
-font-family: Barlow Semi Condensed;
-font-size: 30px;
-font-style: normal;
-font-weight: 400;
-margin-top: 0;
-padding-top: 0;
-line-height: 1;
+  font-family: Barlow Semi Condensed;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 0;
+  padding-top: 0;
+  line-height: 1;
 }
 
 h3 {
-  font-family: "Roboto";
-  font-size: 20px;
+  font-family: Barlow Semi Condensed;
+  font-size: 15px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 300;
   margin-top: 10;
   padding-top: 0;
   line-height: 1;
-  }
+}
 
 a:link {
-  display: inline-block; 
+  display: inline-block;
   margin: 0 10px;
   text-decoration: none;
   font-size: large;
@@ -61,12 +65,43 @@ a:visited {
 }
 
 a:hover {
-  color: black;
-  font-weight: 600;
+  color: rgb(102, 102, 105);
 }
-.contact-link:hover {
-  color: rgb(102, 102, 105); /* Change color on hover */
-  text-decoration: underline; /* Add underline on hover */
-  font-weight: 400;
 
+.contact-link:hover {
+  color: rgb(102, 102, 105);
+  /* Change color on hover */
+  text-decoration: underline;
+  /* Add underline on hover */
+  font-weight: 400;
+}
+
+.about-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.about-content.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-container {
+  padding-top: 80px;
+}
+
+.custom-dropdown .dropdown-menu {
+  margin: 0;
+}
+
+.custom-dropdown .dropdown-item {
+  padding: 8px 16px;
+  margin: 0;
+}
+
+.custom-dropdown .dropdown-item.active,
+.custom-dropdown .dropdown-item:active {
+  background-color: rgba(183, 188, 190, 0.415) !important;
+  color: black !important;
 }

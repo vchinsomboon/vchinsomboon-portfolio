@@ -1,13 +1,43 @@
-.projects-landing-container {
+p {
+    color: black;
+    width: 270px;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0;
+    margin-bottom: 10px;
+}
+
+ul li {
+    font-family: "Roboto";
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.projects-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 100%;
-    max-width: 90vw;
-    margin: 0 auto;
+    width: 90vw;
+    /* 90% of viewport width */
+    height: 90vh;
+    /* 90% of viewport height */
+    max-width: 90%;
+    /* Maximum width relative to viewport */
+    max-height: 90%;
+    /* Maximum height relative to viewport */
+    margin: auto;
+    /* Center horizontally */
+    padding: 10px;
+    /* Adjust padding as needed */
     box-sizing: border-box;
-    padding-top: 40px;
-    padding-right: 40px;
+    overflow-y: auto;
+    /* Add vertical scroll if content exceeds height */
 }
 
 .tab-list {
@@ -22,7 +52,6 @@
     padding: 15px 30px;
     cursor: pointer;
     background-color: #f0f0f0;
-    border: 1px solid #ccc;
     border-bottom: none;
     border-radius: 10px 10px 0 0;
     margin-right: 5px;
@@ -33,7 +62,9 @@
 
 .tab.active {
     background-color: #fff;
-    border-bottom: none;
+    border: 1px solid #ccc;
+    border-bottom: 3px solid #ccc;
+    /* Solid bottom border for active tab */
     z-index: 2;
     transform: translateY(-3px);
 }

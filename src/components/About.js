@@ -1,65 +1,81 @@
-import React from "react";
-import { Flex, VStack, Heading, Text, HStack } from "@chakra-ui/react";
+import React, { useEffect, useState } from "react";
+import { VStack, Heading, Text, HStack, Box } from "@chakra-ui/react";
+import PageContainer from "../components/PageContainer";
 
 const About = () => {
-  return (
-    <Flex direction="column" align="center" mt="50px" gridGap="40px">
-      <VStack align="center" maxWidth="800px" textAlign="center">
-        <Heading as="h1" size="xl">
-          Varalee Chinsomboon
-        </Heading>
-        <Heading as="h2" size="md">
-          Software Engineer / Data Analyst
-        </Heading>
-        <Text as="p" width="550px" textAlign="justify" maxWidth="800px">
-          Hey there, I'm Varalee Chinsomboon, a full stack developer with a
-          background in physics and biology from the University of British
-          Columbia. I began my journey at BC Cancer Research Center, where I
-          immersed myself in programming and data analytics.
-        </Text>
-        <Text as="p" width="550px" textAlign="justify" maxWidth="800px">
-          Transitioning to the mobile game industry, I thrived as a Software
-          Engineer, specializing in full stack web application design and
-          development. My expertise includes crafting robust web solutions,
-          managing SQL databases, and navigating backend complexities. My
-          dedication lies in delivering high-quality, user-centric products.
-        </Text>
-        <Text as="p" width="550px" textAlign="justify" maxWidth="800px">
-          I'm passionate about applying my diverse expertise to create impactful
-          and user-friendly data-driven solutions. Be sure to check out the
-          projects section to see some of my work.
-        </Text>
-      </VStack>
+  const [animate, setAnimate] = useState(false);
 
-      <HStack
-        paddingTop="40px"
-        spacing="40px"
-        maxWidth="800px"
-        width="100%"
-        justifyContent="center"
-        alignItems="start"
+  useEffect(() => {
+    setAnimate(true);
+  }, []);
+
+  return (
+    <PageContainer>
+      <Box
+        p={6} // Padding
+        maxWidth={{ base: "100%", md: "800px" }} // Adjusts max width based on screen size
+        margin="0 auto" // Centers the box horizontally
+        borderRadius="lg" // Rounded corners
+        boxShadow="lg" // Adds shadow for depth
+        bg="rgba(255, 255, 255, 0.9)" // Transparent white background
+        className={`about-content ${animate ? "animate" : ""}`}
       >
-        <VStack align="center" textAlign="left">
-          <Heading as="h3" size="md" mb="2">
-            Key Skills
+        <VStack align="center" textAlign="center" spacing={6}>
+          <Heading as="h1" size="xl">
+            Varalee Chinsomboon
           </Heading>
-          <Text as="ul" width="100%" textAlign="left">
-            <li>Data Analytics</li>
-            <li>Full Stack Web Development</li>
-            <li>SQL Database Management</li>
-            <li>Python Scripting</li>
+          <Heading as="h2" size="md">
+            Software Engineer / Data Analyst
+          </Heading>
+          <Text paddingTop="20px" width="55%" textAlign="left">
+            Hello, I'm Varalee Chinsomboon, a full-stack developer with a
+            background in physics and biology from the University of British
+            Columbia. My journey began at the BC Cancer Research Center, where
+            I delved into programming and data analytics.
+          </Text>
+          <Text width="55%" textAlign="left">
+            Transitioning into the mobile game industry, I excelled as a
+            Software Engineer, specializing in full-stack web application
+            design and development. I take pride in crafting robust web
+            solutions, managing SQL databases, and navigating backend
+            complexities to deliver high-quality, user-centric products.
+          </Text>
+          <Text width="55%" textAlign="left">
+            I'm passionate about leveraging my diverse expertise to create
+            impactful and user-friendly data-driven solutions. Explore the
+            projects section to see some of my work.
           </Text>
         </VStack>
-        <VStack align="center" textAlign="left">
-          <Heading as="h3" size="md" mb="2">
-            Certifications
-          </Heading>
-          <Text as="ul" width="100%" textAlign="left">
-            <li>AWS Certified Cloud Practitioner</li>
-          </Text>
-        </VStack>
-      </HStack>
-    </Flex>
+
+        <HStack
+          marginTop="40px"
+          spacing={{ base: 4, md: 10 }} // Adjust spacing based on screen size
+          maxWidth="100%"
+          justifyContent="center"
+          alignItems="start"
+        >
+          <VStack align="center" textAlign="left">
+            <Heading as="h3" size="md" marginBottom="2">
+              Key Skills
+            </Heading>
+            <Text as="ul" width="100%" textAlign="left">
+              <li>Data Analytics</li>
+              <li>Full Stack Web Development</li>
+              <li>SQL Database Management</li>
+              <li>Python Scripting</li>
+            </Text>
+          </VStack>
+          <VStack align="center" textAlign="left">
+            <Heading as="h3" size="md" marginBottom="2">
+              Certifications
+            </Heading>
+            <Text as="ul" width="100%" textAlign="left">
+              <li>AWS Certified Cloud Practitioner</li>
+            </Text>
+          </VStack>
+        </HStack>
+      </Box>
+    </PageContainer>
   );
 };
 
