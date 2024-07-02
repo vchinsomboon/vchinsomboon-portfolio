@@ -1,7 +1,7 @@
 # My Portfolio
 
 This repository hosts the source code and deployment configuration for my personal/portfolio website hosted on GitHub Pages. (In Progress)
-
+URL: https://vchinsomboon.github.io/vchinsomboon-portfolio.
 ## Getting Started
 
 ### Prerequisites
