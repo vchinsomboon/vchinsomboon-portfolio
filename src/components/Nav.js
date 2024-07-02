@@ -18,7 +18,7 @@ const NavBar = () => {
   return (
     <div>
       <Navbar bg="light" expand="lg" fixed="top">
-        <Navbar.Brand href="/">
+        <Navbar.Brand href="/vchinsomboon-portfolio">
           <img
             src={logo}
             width="120"
