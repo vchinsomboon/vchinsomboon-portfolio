@@ -79,8 +79,31 @@ html {
     border: 1px solid #ccc;
     border-radius: 0 0 10px 10px;
     margin-top: -1px;
+    overflow-y: auto;
 }
 
 .content {
     display: block;
+}
+
+.titanic-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.titanic-container h1,
+.titanic-container h2,
+.titanic-container h3,
+.titanic-container p,
+.titanic-container ul {
+  text-align: left;
+  width: 90%;
+  margin-bottom: 50px; /* Adds space between sections */
+}
+
+.titanic-container img {
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
 }

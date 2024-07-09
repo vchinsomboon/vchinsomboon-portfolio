@@ -1,16 +1,16 @@
 import './Project.css';
 import config from '../../config.js';
 import { useEffect, useState } from 'react';
-import PageContainer from "../PageContainer.js"; // Import your PageContainer component
-import { Flex, Box, Text, Heading } from "@chakra-ui/react";
+import PageContainer from "../PageContainer.js";
+import { Flex } from "@chakra-ui/react";
+import Project1Article from './Project1Article.js';
 
 const Project1 = () => {
     const { PROJECTS } = config;
     const project = PROJECTS.find(project => project.id === 'Project1');
 
     const [data, setData] = useState(null);
-
-    const [activeTab, setActiveTab] = useState("tab1"); // State to manage active tab
+    const [activeTab, setActiveTab] = useState("tab1");
 
     const handleTabClick = (tab) => {
         setActiveTab(tab);
@@ -47,15 +47,16 @@ const Project1 = () => {
                         {activeTab === "tab1" && (
                             <div className="content">
                                 <div className="project-1-container">
-                                    <h3>Data from Flask Backend</h3>
-                                    {data ? <p>{data.message}</p> : <p>Loading...</p>}
+                                    <Project1Article />
                                 </div>
                             </div>
                         )}
                         {activeTab === "tab2" && (
                             <div className="content">
-                                <h2>Tab 2 content</h2>
-                                <p>Content for Tab 2 goes here...</p>
+                                <h3>Data from Flask Backend</h3>
+                                <div className="data-container">
+                                    {data ? <p>{data.message}</p> : <p>Loading...</p>}
+                                </div>
                             </div>
                         )}
                     </div>
