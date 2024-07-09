@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import PageContainer from "../PageContainer.js";
 import { Flex } from "@chakra-ui/react";
 import Project1Article from './Project1Article.js';
+import Project1Notebook from './Project1Notebook.js';
 
 const Project1 = () => {
     const { PROJECTS } = config;
@@ -37,6 +38,12 @@ const Project1 = () => {
                             Article
                         </div>
                         <div
+                            className={`tab ${activeTab === "tab3" ? "active" : ""}`}
+                            onClick={() => handleTabClick("tab3")}
+                        >
+                            Jupyter Notebook
+                        </div>
+                        <div
                             className={`tab ${activeTab === "tab2" ? "active" : ""}`}
                             onClick={() => handleTabClick("tab2")}
                         >
@@ -58,6 +65,13 @@ const Project1 = () => {
                                     {data ? <p>{data.message}</p> : <p>Loading...</p>}
                                 </div>
                             </div>
+                        )}
+                        {activeTab === "tab3" && (
+                            <div className="content">
+                            <div className="project-1-container">
+                                <Project1Notebook />
+                            </div>
+                        </div>
                         )}
                     </div>
                 </div>

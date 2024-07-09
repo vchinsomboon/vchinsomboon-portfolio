@@ -36,6 +36,65 @@ const Project1Article = () => {
                     <p>
                         First, let’s explore the data to understand its structure and identify any patterns. We will load the dataset and perform basic statistical analysis.
                     </p>
+                    <div className="data-table">
+                    <h3>Data Dictionary</h3>
+                        <table className="table">
+                            <thead>
+                                <tr>
+                                    <th>Variable</th>
+                                    <th>Definition</th>
+                                    <th>Key</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>PassengerId</td>
+                                    <td>ID of the passenger</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Survived</td>
+                                    <td>Survival</td>
+                                    <td>0 = No, 1 = Yes</td>
+                                </tr>
+                                <tr>
+                                    <td>Pclass</td>
+                                    <td>Ticket class</td>
+                                    <td>1 = 1st, 2 = 2nd, 3 = 3rd</td>
+                                </tr>
+                                <tr>
+                                    <td>Sex</td>
+                                    <td>Sex of the passenger</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Age</td>
+                                    <td>Age of the passenger in years</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>SibSp</td>
+                                    <td>Number of siblings/spouses aboard the Titanic</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Parch</td>
+                                    <td>Number of parents/children aboard the Titanic</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Fare</td>
+                                    <td>Passenger fare</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Embarked</td>
+                                    <td>Port of Embarkation</td>
+                                    <td>C = Cherbourg, Q = Queenstown, S = Southampton</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <h3>Exploratory Data Analysis:</h3>
                     <p>We start by examining the distribution of key features such as age and fare.</p>
                     <img src={ageDistr} alt="Age Distribution" style={{ width: '100%', maxWidth: '800px' }} />
@@ -52,7 +111,7 @@ const Project1Article = () => {
                         Passengers in 2nd class had a lower survival rate.<br />
                         Passengers in 3rd class had the lowest survival rate.<br />
                         <strong>Chi2 test for Passenger Class:</strong><br />
-                        Chi2: 102.88898875696056, p-value: 4.549251711298793e-23<br />
+                        Chi2: 102.89, p-value: 4.549e-23<br />
                         Result: The relationship between Passenger Class and survival is significant (Reject H0)
                     </p>
 
@@ -60,7 +119,7 @@ const Project1Article = () => {
                         <strong>Survival Rate by Sex:</strong><br />
                         Females had a significantly higher survival rate compared to males.<br />
                         <strong>Chi2 test for Sex:</strong><br />
-                        Chi2: 260.71702016732104, p-value: 1.1973570627755645e-58<br />
+                        Chi2: 260.72, p-value: 1.197e-58<br />
                         Result: The relationship between Sex and survival is significant (Reject H0)
                     </p>
 
@@ -69,7 +128,7 @@ const Project1Article = () => {
                         Passengers who paid higher fares generally had higher survival rates.<br />
                         The highest survival rate was observed among those who paid fares between 50 and 100, and 100 and 600.<br />
                         <strong>Chi2 test for Fare:</strong><br />
-                        Chi2: 425.8083805791106, p-value: 1.1647635739939964e-11<br />
+                        Chi2: 425.81, p-value: 1.165e-11<br />
                         Result: The relationship between Fare and survival is significant (Reject H0)
                     </p>
 
@@ -78,7 +137,7 @@ const Project1Article = () => {
                         Children aged 0-10 had a higher survival rate.<br />
                         Survival rates decreased with age. Older age groups (70-80) had lower survival rates.<br />
                         <strong>Chi2 test for Age:</strong><br />
-                        Chi2: 104.15604988902831, p-value: 0.10141111018860959<br />
+                        Chi2: 104.16, p-value: 0.101<br />
                         Result: The relationship between Age and survival is not significant (Fail to reject H0)<br />
                         Note: This means that while there is an observable trend where children had higher survival rates and older adults had lower survival rates, the statistical test suggests that this relationship could have occurred by random chance and may not be significant in predicting survival solely based on age.
                     </p>
@@ -89,7 +148,7 @@ const Project1Article = () => {
                         Passengers who embarked at 'Q' (Queenstown) had a moderate survival rate.<br />
                         Passengers who embarked at 'S' (Southampton) had the lowest survival rate.<br />
                         <strong>Chi2 test for Embarked:</strong><br />
-                        Chi2: 26.48914983923762, p-value: 1.769922284120912e-06<br />
+                        Chi2: 26.49, p-value: 1.770e-06<br />
                         Result: The relationship between Embarked and survival is significant (Reject H0)
                     </p>
 
@@ -100,7 +159,7 @@ const Project1Article = () => {
                         Passengers with no family (family size of 0) had a moderate survival rate.<br />
                         Very large family sizes (7 and above) had lower survival rates.<br />
                         <strong>Chi2 test for Family Size:</strong><br />
-                        Chi2: 80.67231343783078, p-value: 3.579668975443533e-14<br />
+                        Chi2: 80.67, p-value: 3.580e-14<br />
                         Result: The relationship between Family Size and survival is significant (Reject H0)
                     </p>
                 </div>
@@ -156,7 +215,7 @@ const Project1Article = () => {
                     <h3>Random Forest</h3><br />
                     <img src={rf_CR} alt="RF Classification Report" style={{ width: '100%', maxWidth: '400px', display: 'block', margin: 'auto' }} />
                     <img src={rf_CM} alt="RF Confusion Matrix" style={{ width: '100%', maxWidth: '800px' }} />
-                    <p>Based on the evaluation, we selected the Random Forest model.</p>
+                    <p>Based on the evaluation metrics, the Random Forest model achieved a higher test set accuracy of 83% compared to the Decision Tree's 80%. It also demonstrated balanced precision, recall, and F1-score across survival and non-survival predictions, indicating superior performance in capturing true positives while minimizing false negatives. These results affirm the Random Forest model's effectiveness and reliability in predicting Titanic survival, thereby influencing its selection over the Decision Tree model for this study.</p>
                 </div>
 
                 <div id="conclusion" className="section">
