@@ -1,17 +1,24 @@
 {
   "files": {
-    "main.css": "/vchinsomboon-portfolio/static/css/main.5debadfb.css",
-    "main.js": "/vchinsomboon-portfolio/static/js/main.7ba259b7.js",
+    "main.css": "/vchinsomboon-portfolio/static/css/main.dd15a775.css",
+    "main.js": "/vchinsomboon-portfolio/static/js/main.f68c5203.js",
     "static/js/453.1aec2b98.chunk.js": "/vchinsomboon-portfolio/static/js/453.1aec2b98.chunk.js",
     "static/media/karla.ttf": "/vchinsomboon-portfolio/static/media/karla.1d835e644ae4118a28fc.ttf",
+    "static/media/bar_plots.png": "/vchinsomboon-portfolio/static/media/bar_plots.e82377c52323805a3266.png",
+    "static/media/age_dist.png": "/vchinsomboon-portfolio/static/media/age_dist.518ddbeec82422bbe358.png",
     "static/media/VCLogo.png": "/vchinsomboon-portfolio/static/media/VCLogo.f6afee5048dd8cc03fb7.png",
+    "static/media/RF_classification_report.png": "/vchinsomboon-portfolio/static/media/RF_classification_report.dc0349e906f7f140d45a.png",
+    "static/media/confusion_matrix_RF.png": "/vchinsomboon-portfolio/static/media/confusion_matrix_RF.f590a65db0823bcab5c9.png",
+    "static/media/confusion_matrix_DT.png": "/vchinsomboon-portfolio/static/media/confusion_matrix_DT.4f5b00ac4f5bb4d66e51.png",
+    "static/media/fare_dist.png": "/vchinsomboon-portfolio/static/media/fare_dist.7e2a5fe86c3336c7a3ca.png",
+    "static/media/DT_classification_report.png": "/vchinsomboon-portfolio/static/media/DT_classification_report.09e24ab9c8d5d707af0a.png",
     "index.html": "/vchinsomboon-portfolio/index.html",
-    "main.5debadfb.css.map": "/vchinsomboon-portfolio/static/css/main.5debadfb.css.map",
-    "main.7ba259b7.js.map": "/vchinsomboon-portfolio/static/js/main.7ba259b7.js.map",
+    "main.dd15a775.css.map": "/vchinsomboon-portfolio/static/css/main.dd15a775.css.map",
+    "main.f68c5203.js.map": "/vchinsomboon-portfolio/static/js/main.f68c5203.js.map",
     "453.1aec2b98.chunk.js.map": "/vchinsomboon-portfolio/static/js/453.1aec2b98.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5debadfb.css",
-    "static/js/main.7ba259b7.js"
+    "static/css/main.dd15a775.css",
+    "static/js/main.f68c5203.js"
   ]
 }
