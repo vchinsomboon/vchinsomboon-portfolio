@@ -5,6 +5,7 @@ import PageContainer from "../PageContainer.js";
 import { Flex } from "@chakra-ui/react";
 import Project1Article from './Project1Article.js';
 import Project1Notebook from './Project1Notebook.js';
+import Project1Tool from './Project1Tool.js';
 
 const Project1 = () => {
     const { PROJECTS } = config;
@@ -62,6 +63,7 @@ const Project1 = () => {
                             <div className="content">
                                 <h3>Data from Flask Backend</h3>
                                 <div className="data-container">
+                                <Project1Tool />
                                     {data ? <p>{data.message}</p> : <p>Loading...</p>}
                                 </div>
                             </div>
