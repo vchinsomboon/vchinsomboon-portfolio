@@ -11,20 +11,12 @@ const Project1 = () => {
     const { PROJECTS } = config;
     const project = PROJECTS.find(project => project.id === 'Project1');
 
-    const [data, setData] = useState(null);
-    const [activeTab, setActiveTab] = useState("tab1");
+    const [activeTab, setActiveTab] = useState(localStorage.getItem("activeTab") || "tab1");
 
     const handleTabClick = (tab) => {
         setActiveTab(tab);
+        localStorage.setItem("activeTab", tab);
     };
-
-    useEffect(() => {
-        fetch(`${config.API_BASE_URL}/api/data`)
-            .then(response => response.json())
-            .then(data => setData(data))
-            .catch(error => console.error('Error fetching data:', error));
-    }, []);
-
     return (
         <PageContainer>
             <h1>{project.title}</h1>
@@ -63,17 +55,16 @@ const Project1 = () => {
                             <div className="content">
                                 <h3>Data from Flask Backend</h3>
                                 <div className="data-container">
-                                <Project1Tool />
-                                    {data ? <p>{data.message}</p> : <p>Loading...</p>}
+                                    <Project1Tool />
                                 </div>
                             </div>
                         )}
                         {activeTab === "tab3" && (
                             <div className="content">
-                            <div className="project-1-container">
-                                <Project1Notebook />
+                                <div className="project-1-container">
+                                    <Project1Notebook />
+                                </div>
                             </div>
-                        </div>
                         )}
                     </div>
                 </div>
