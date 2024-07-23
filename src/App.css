@@ -6,17 +6,23 @@
   background-color: #ffffff;
 }
 
-.App>Nav {
+.App > Nav {
   grid-column: 1;
   grid-row: 1;
 }
 
-.App>Footer {
+.navbar-nav .nav-link {
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.App > Footer {
   padding-top: 50px;
 }
 
 ul li {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
@@ -44,7 +50,7 @@ h3 {
   font-size: 15px;
   font-style: normal;
   font-weight: 300;
-  margin-top: 10;
+  margin-top: 10px;
   padding-top: 0;
   line-height: 1;
 }
