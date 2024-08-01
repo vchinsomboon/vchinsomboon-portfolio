@@ -12,12 +12,12 @@ const Project1 = () => {
   const project = PROJECTS.find((project) => project.id === "Project1");
 
   const [activeTab, setActiveTab] = useState(
-    localStorage.getItem("activeTab") || "tab1"
+    localStorage.getItem("activeTabProject1") || "tab1"
   );
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
-    localStorage.setItem("activeTab", tab);
+    localStorage.setItem("activeTabProject1", tab);
   };
   return (
     <PageContainer>

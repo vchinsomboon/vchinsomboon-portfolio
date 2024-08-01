@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./Tableau.css";
 
-const Tableau = ({ url }) => {
+const TableauSheets = ({ url }) => {
   const ref = useRef(null);
 
   useEffect(() => {
@@ -34,7 +34,8 @@ const Tableau = ({ url }) => {
       style={{
         width: "100%", // Full width of the container
         height: "80vh", // Responsive height
-        maxWidth: "1200px", // Optional: limit the maximum width
+        maxWidth: "600px", // Optional: limit the maximum width
+        maxHeight: "500px", // Optional: limit the maximum width
         margin: "auto",
       }}
     >
@@ -43,4 +44,4 @@ const Tableau = ({ url }) => {
   );
 };
 
-export default Tableau;
+export default TableauSheets;

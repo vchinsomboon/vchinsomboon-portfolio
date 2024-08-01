@@ -1,0 +1,23 @@
+.tableau-sheet {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tableau-iframe {
+  flex: 1;
+}
+
+.sheet-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns content to the start of the container */
+  padding: 10px; /* Optional: Add padding to the container */
+  margin-top: 10px; /* Optional: Add margin-top to separate from the sheet */
+  border: 1px solid transparent; /* Invisible border to create box */
+  word-wrap: break-word; /* Ensure long words are wrapped properly */
+  max-width: 500px;
+}
+
+.data-summary {
+  margin-top: 10px;
+}
