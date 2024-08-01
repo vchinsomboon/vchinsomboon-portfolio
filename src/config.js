@@ -13,11 +13,12 @@ const config = {
       description:
         "Predicting survival on the Titanic using machine learning techniques.",
     },
-    // {
-    //   id: "Project2",
-    //   title: "Project 2 (TBD)",
-    //   description: "Project 2 Description",
-    // },
+    {
+      id: "Project2",
+      title: "Tableau Projects",
+      description:
+        "A collection of interactive dashboards showcasing insights from diverse datasets.",
+    },
     // Add more projects as needed
   ],
 };
