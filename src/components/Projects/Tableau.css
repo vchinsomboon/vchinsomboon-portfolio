@@ -21,3 +21,14 @@
 .data-summary {
   margin-top: 10px;
 }
+
+.overview {
+  width: 80%;
+  color: black;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0;
+  margin-bottom: 10px;
+  text-align: left;
+}

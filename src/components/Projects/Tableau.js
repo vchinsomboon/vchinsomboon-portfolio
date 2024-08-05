@@ -32,10 +32,11 @@ const Tableau = ({ url }) => {
       ref={ref}
       className="tableau-container" // Add a class for specific styling
       style={{
-        width: "100%", // Full width of the container
-        height: "80vh", // Responsive height
-        maxWidth: "1200px", // Optional: limit the maximum width
+        width: "100%",
+        height: "80vh",
+        maxWidth: "1200px",
         margin: "auto",
+        padding: "40px 0px 40px 0px",
       }}
     >
       {/* Tableau visualization will be rendered here */}

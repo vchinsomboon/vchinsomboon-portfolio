@@ -1,11 +1,11 @@
 import React from "react";
-import barPlotsMulti from "./project_assets/bar_plots.png"; // Import the PNG file
-import fareDistr from "./project_assets/fare_dist.png"; // Import the PNG file
-import ageDistr from "./project_assets/age_dist.png"; // Import the PNG file
-import dt_CM from "./project_assets/confusion_matrix_DT.png"; // Import the PNG file
-import rf_CM from "./project_assets/confusion_matrix_RF.png"; // Import the PNG file
-import dt_CR from "./project_assets/DT_classification_report.png"; // Import the PNG file
-import rf_CR from "./project_assets/RF_classification_report.png"; // Import the PNG file
+import barPlotsMulti from "../project_assets/bar_plots.png"; // Import the PNG file
+import fareDistr from "../project_assets/fare_dist.png"; // Import the PNG file
+import ageDistr from "../project_assets/age_dist.png"; // Import the PNG file
+import dt_CM from "../project_assets/confusion_matrix_DT.png"; // Import the PNG file
+import rf_CM from "../project_assets/confusion_matrix_RF.png"; // Import the PNG file
+import dt_CR from "../project_assets/DT_classification_report.png"; // Import the PNG file
+import rf_CR from "../project_assets/RF_classification_report.png"; // Import the PNG file
 
 const Project1Article = () => {
   return (

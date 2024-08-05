@@ -9,13 +9,13 @@ const config = {
   PROJECTS: [
     {
       id: "Project1",
-      title: "Titanic Survival (ML)",
+      title: "Titanic Survival (Machine Learning)",
       description:
         "Predicting survival on the Titanic using machine learning techniques.",
     },
     {
       id: "Project2",
-      title: "Tableau Projects",
+      title: "Tableau Data Visualization",
       description:
         "A collection of interactive dashboards showcasing insights from diverse datasets.",
     },

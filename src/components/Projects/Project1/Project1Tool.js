@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./Project.css";
-import config from "../../config.js";
+import "../Project.css";
+import config from "../../../config";
 
 const Project1Tool = () => {
   const initialFormData = {

@@ -81,7 +81,7 @@ const tableauConfig = {
           "X-axis": "Drug Type (D-penicillamine, Placebo)",
           "Y-axis": "Disease Stage (1, 2, 3, 4)",
           Findings:
-            "The heat map shows the distribution of histologic stages among patients receiving D-penicillamine and those on placebo. For D-penicillamine, the counts are: Stage 1 (9), Stage 2 (31), Stage 3 (51), and Stage 4 (45). For placebo, the counts are: Stage 1 (3), Stage 2 (28), Stage 3 (60), and Stage 4 (49). This distribution provides a snapshot of the stage of disease among the two groups, with varying numbers across each histologic stage..",
+            "The heat map shows the distribution of histologic stages among patients receiving D-penicillamine and those on placebo. For D-penicillamine, the counts are: Stage 1 (9), Stage 2 (31), Stage 3 (51), and Stage 4 (45). For placebo, the counts are: Stage 1 (3), Stage 2 (28), Stage 3 (60), and Stage 4 (49). This distribution provides a snapshot of the stage of disease among the two groups, with varying numbers across each histologic stage.",
         },
         sheetUrl:
           "https://public.tableau.com/views/Cirrhosis_sheets/Sheet5?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",

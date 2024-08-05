@@ -1,7 +1,7 @@
-import "./Project.css";
-import config from "../../config.js";
+import "../Project.css";
+import config from "../../../config.js";
 import { useEffect, useState } from "react";
-import PageContainer from "../PageContainer.js";
+import PageContainer from "../../PageContainer.js";
 import { Flex } from "@chakra-ui/react";
 import Project1Article from "./Project1Article.js";
 import Project1Notebook from "./Project1Notebook.js";
