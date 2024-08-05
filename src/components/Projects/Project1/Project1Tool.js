@@ -19,6 +19,7 @@ const Project1Tool = () => {
 
   const [formData, setFormData] = useState(initialFormData);
   const [result, setResult] = useState(null);
+  const [error, setError] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,6 +28,7 @@ const Project1Tool = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError(null);
     try {
       const response = await fetch(`${config.API_BASE_URL}/api/predict`, {
         method: "POST",
@@ -39,6 +41,7 @@ const Project1Tool = () => {
       setResult(result);
       console.log("Success:", result);
     } catch (error) {
+      setError(error.message);
       console.error("Error:", error);
     }
   };
@@ -46,6 +49,7 @@ const Project1Tool = () => {
   const handleReset = () => {
     setFormData(initialFormData);
     setResult(null);
+    setError(null);
   };
 
   return (
@@ -58,6 +62,7 @@ const Project1Tool = () => {
         affecting survival rates and respectfully explore the outcomes based on
         data from the tragic event.
       </p>
+      {error && <div className="error-message">{error}</div>}
       {result === null && (
         <>
           <h3>Enter Passenger Information</h3>
