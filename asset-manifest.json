@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/vchinsomboon-portfolio/static/css/main.c97f0ef5.css",
-    "main.js": "/vchinsomboon-portfolio/static/js/main.c5357fbc.js",
+    "main.css": "/vchinsomboon-portfolio/static/css/main.c8fdc535.css",
+    "main.js": "/vchinsomboon-portfolio/static/js/main.aceb6d5a.js",
     "static/js/453.1aec2b98.chunk.js": "/vchinsomboon-portfolio/static/js/453.1aec2b98.chunk.js",
     "static/media/karla.ttf": "/vchinsomboon-portfolio/static/media/karla.1d835e644ae4118a28fc.ttf",
     "static/media/bar_plots.png": "/vchinsomboon-portfolio/static/media/bar_plots.e82377c52323805a3266.png",
@@ -13,12 +13,12 @@
     "static/media/fare_dist.png": "/vchinsomboon-portfolio/static/media/fare_dist.7e2a5fe86c3336c7a3ca.png",
     "static/media/DT_classification_report.png": "/vchinsomboon-portfolio/static/media/DT_classification_report.09e24ab9c8d5d707af0a.png",
     "index.html": "/vchinsomboon-portfolio/index.html",
-    "main.c97f0ef5.css.map": "/vchinsomboon-portfolio/static/css/main.c97f0ef5.css.map",
-    "main.c5357fbc.js.map": "/vchinsomboon-portfolio/static/js/main.c5357fbc.js.map",
+    "main.c8fdc535.css.map": "/vchinsomboon-portfolio/static/css/main.c8fdc535.css.map",
+    "main.aceb6d5a.js.map": "/vchinsomboon-portfolio/static/js/main.aceb6d5a.js.map",
     "453.1aec2b98.chunk.js.map": "/vchinsomboon-portfolio/static/js/453.1aec2b98.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c97f0ef5.css",
-    "static/js/main.c5357fbc.js"
+    "static/css/main.c8fdc535.css",
+    "static/js/main.aceb6d5a.js"
   ]
 }
