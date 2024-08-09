@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import "../Tableau.css";
 import config from "../../../config.js";
 import PageContainer from "../../PageContainer.js";
-import { Flex, Grid } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import Project2Dashboard from "./Project2Dashboard.js";
 import Project2Sheets from "./Project2Sheets.js";
+import Project2VehicleDashboard from "./Project2VehicleDashboard.js";
 
 const Project2 = () => {
   const { PROJECTS } = config;
@@ -17,6 +18,7 @@ const Project2 = () => {
   const handleTabClick = (tab) => {
     setActiveTab(tab);
     localStorage.setItem("activeTabProject2", tab);
+    window.location.reload(); // Refresh the whole page on tab change
   };
 
   return (
@@ -30,18 +32,25 @@ const Project2 = () => {
               className={`tab ${activeTab === "tab1" ? "active" : ""}`}
               onClick={() => handleTabClick("tab1")}
             >
-              Cirrhosis Dashboard
+              California Vehicle Dashboard
             </div>
             <div
               className={`tab ${activeTab === "tab2" ? "active" : ""}`}
               onClick={() => handleTabClick("tab2")}
             >
-              Cirrhosis Sheets
+              Cirrhosis Dashboard
+            </div>
+            <div
+              className={`tab ${activeTab === "tab3" ? "active" : ""}`}
+              onClick={() => handleTabClick("tab3")}
+            >
+              Cirrhosis Sheet Analysis
             </div>
           </div>
           <div className="tab-content">
-            {activeTab === "tab1" && <Project2Dashboard />}
-            {activeTab === "tab2" && <Project2Sheets />}
+            {activeTab === "tab1" && <Project2VehicleDashboard />}
+            {activeTab === "tab2" && <Project2Dashboard />}
+            {activeTab === "tab3" && <Project2Sheets />}
           </div>
         </div>
       </Flex>
