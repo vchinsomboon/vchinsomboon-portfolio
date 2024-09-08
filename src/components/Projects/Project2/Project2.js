@@ -6,6 +6,7 @@ import { Flex } from "@chakra-ui/react";
 import Project2Dashboard from "./Project2Dashboard.js";
 import Project2Sheets from "./Project2Sheets.js";
 import Project2VehicleDashboard from "./Project2VehicleDashboard.js";
+import Project2VendingDashboard from "./Project2VendingDashboard.js";
 
 const Project2 = () => {
   const { PROJECTS } = config;
@@ -32,25 +33,32 @@ const Project2 = () => {
               className={`tab ${activeTab === "tab1" ? "active" : ""}`}
               onClick={() => handleTabClick("tab1")}
             >
-              California Vehicle Dashboard
+              Vending Machine Sales Dashboard
             </div>
             <div
               className={`tab ${activeTab === "tab2" ? "active" : ""}`}
               onClick={() => handleTabClick("tab2")}
             >
-              Cirrhosis Dashboard
+              California Vehicle Dashboard
             </div>
             <div
               className={`tab ${activeTab === "tab3" ? "active" : ""}`}
               onClick={() => handleTabClick("tab3")}
             >
+              Cirrhosis Dashboard
+            </div>
+            <div
+              className={`tab ${activeTab === "tab4" ? "active" : ""}`}
+              onClick={() => handleTabClick("tab4")}
+            >
               Cirrhosis Sheet Analysis
             </div>
           </div>
           <div className="tab-content">
-            {activeTab === "tab1" && <Project2VehicleDashboard />}
-            {activeTab === "tab2" && <Project2Dashboard />}
-            {activeTab === "tab3" && <Project2Sheets />}
+            {activeTab === "tab1" && <Project2VendingDashboard />}
+            {activeTab === "tab2" && <Project2VehicleDashboard />}
+            {activeTab === "tab3" && <Project2Dashboard />}
+            {activeTab === "tab4" && <Project2Sheets />}
           </div>
         </div>
       </Flex>
