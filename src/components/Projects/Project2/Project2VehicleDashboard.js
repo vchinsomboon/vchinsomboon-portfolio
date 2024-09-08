@@ -6,7 +6,7 @@ const Project2VehicleDashboard = () => {
   return (
     <div className="content">
       <h3>California Light-Duty Vehicle Population 2010-2023</h3>
-      <Tableau url="https://public.tableau.com/shared/KJQMZQD5H?:display_count=n&:origin=viz_share_link" />
+      <Tableau url="https://public.tableau.com/views/CaliforniaLight-DutyVehicleV2/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" />
       <br />
       <h4>Background</h4>
       <br />
